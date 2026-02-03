@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, ShoppingCart, Building2 } from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -63,10 +63,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="heading-1 text-foreground mb-6"
             >
-              Protect Your{' '}
-              <span className="text-gradient">Shopify Revenue</span>
-              <br />
-              with Professional QA Testing
+              Protect Your <span className="text-gradient">Shopify Revenue</span> with Expert QA
             </motion.h1>
             
             {/* Subheadline */}
@@ -80,12 +77,12 @@ export function HeroSection() {
               and purchase flows to prevent lost sales.
             </motion.p>
             
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
+              className="flex justify-center mb-6"
             >
               <Button 
                 asChild 
@@ -96,17 +93,6 @@ export function HeroSection() {
                   <ShoppingCart className="h-5 w-5" />
                   Get a Free Mini Audit
                   <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6 border-border text-foreground hover:bg-card hover:border-primary/50"
-              >
-                <Link href="/services" className="flex items-center gap-2">
-                  <Building2 className="h-5 w-5" />
-                  I&apos;m an Organization
                 </Link>
               </Button>
             </motion.div>

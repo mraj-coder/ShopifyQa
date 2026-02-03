@@ -21,7 +21,7 @@ export const services: Service[] = [
       'Error handling & app/plugin conflicts',
     ],
     ctaText: 'Request Audit',
-    ctaLink: '/contact',
+    ctaLink: '/services/conversion-qa',
     deliverable: 'Clear, actionable QA report with screenshots, Loom video walkthroughs, and fix recommendations.',
   },
   {
@@ -37,7 +37,7 @@ export const services: Service[] = [
       'End-to-end customer journey',
     ],
     ctaText: 'Start Bug Bash',
-    ctaLink: '/contact',
+    ctaLink: '/services/bug-bash',
     deliverable: 'Screenshots, screen recordings, Loom videos, detailed bug reports with prioritized issue list and fix guidance.',
   },
   {
@@ -52,7 +52,7 @@ export const services: Service[] = [
       'Discount & app conflicts detection',
     ],
     ctaText: 'Get Monthly Support',
-    ctaLink: '/contact',
+    ctaLink: '/services/monthly-qa',
     deliverable: 'Release QA checklist, bug reports, screenshots & Loom videos, and go-live confidence.',
   },
   {

@@ -13,19 +13,21 @@ export const metadata: Metadata = {
 const contactOptions = [
   {
     icon: ShieldCheck,
-    title: 'Free Mini Audit',
-    description: 'Get a complimentary review of your checkout flow.',
+    title: 'Conversion QA Audit',
+    description: 'Get a comprehensive review of your checkout flow and conversion paths.',
     cta: 'Request Audit',
-    link: 'https://forms.google.com/free-audit',
+    link: '/services/conversion-qa',
     primary: true,
+    external: false,
   },
   {
     icon: MessageSquare,
     title: 'General Inquiry',
     description: 'Have questions? We\'re happy to help.',
     cta: 'Send Message',
-    link: 'https://forms.google.com/general',
+    link: 'mailto:contact@shopifyqa.com',
     primary: false,
+    external: true,
   },
 ];
 
@@ -69,8 +71,7 @@ export default function ContactPage() {
                     >
                       <Link
                         href={option.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        {...(option.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                         className="flex items-center justify-center gap-2"
                       >
                         {option.cta}

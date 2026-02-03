@@ -37,7 +37,7 @@ export function CTASection({
             {description}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
@@ -47,14 +47,6 @@ export function CTASection({
                 {ctaText}
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-6 border-border text-foreground hover:bg-card hover:border-primary/50"
-            >
-              <Link href="/services">Learn More</Link>
             </Button>
           </div>
         </div>

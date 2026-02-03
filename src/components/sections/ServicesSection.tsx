@@ -59,7 +59,7 @@ export function ServicesSection({ showAll = false }: ServicesSectionProps) {
                     <Icon className="h-7 w-7 text-primary" />
                   </div>
                   <CardTitle className="heading-3 text-foreground">
-                    {index + 1}️⃣ {service.title}
+                    {service.title}
                   </CardTitle>
                   <CardDescription className="text-base text-muted-foreground">
                     {service.description}

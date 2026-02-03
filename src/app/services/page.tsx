@@ -85,7 +85,7 @@ export default function ServicesPage() {
                             </Badge>
                           </div>
                           <h2 className="heading-2 text-foreground">
-                            {index + 1}️⃣ {service.title}
+                            {service.title}
                           </h2>
                           {details?.subtitle && (
                             <p className="text-muted-foreground mt-1">{details.subtitle}</p>
