@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, ShoppingCart } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { navItems } from '@/data/mock-data';
@@ -14,11 +15,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-custom flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <ShoppingCart className="h-7 w-7 text-primary group-hover:text-primary-light transition-colors" />
-          <span className="text-xl font-bold text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
-            Shopify<span className="text-primary">QA</span>
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image 
+            src="/logo.jpeg" 
+            alt="ShopifyQA Logo" 
+            width={160} 
+            height={48} 
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,11 +59,14 @@ export function Header() {
           <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-border">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col gap-6 pt-6">
-              <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                <ShoppingCart className="h-7 w-7 text-primary" />
-                <span className="text-xl font-bold text-foreground">
-                  Shopify<span className="text-primary">QA</span>
-                </span>
+              <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
+                <Image 
+                  src="/logo.jpeg" 
+                  alt="ShopifyQA Logo" 
+                  width={160} 
+                  height={48} 
+                  className="h-12 w-auto object-contain"
+                />
               </Link>
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
